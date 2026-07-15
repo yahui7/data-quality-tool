@@ -8,12 +8,9 @@
 * { margin: 0; padding: 0; box-sizing: border-box; }
 body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif; background: #f0f2f5; color: #333; line-height: 1.7; min-height: 100vh; }
 
-.header-wrap { position: sticky; top: 0; z-index: 100; background: #f0f2f5; }
-.topbar { background: linear-gradient(135deg, #0a0e27 0%, #1a1f3a 100%); padding: 14px 32px; display: flex; align-items: center; height: 60px; }
-.topbar .brand { color: #fff; font-size: 1.05rem; font-weight: 700; }
-.topbar .brand .icon { margin-right: 8px; }
-.topbar .spacer { flex: 1; }
-.topbar .tag { color: #7eb8da; font-size: 0.8rem; background: rgba(126,184,218,0.12); padding: 4px 14px; border-radius: 20px; border: 1px solid rgba(126,184,218,0.25); }
+.app-header { background: linear-gradient(135deg, #0a0e27 0%, #1a1f3a 100%); color: #fff; padding: 28px 40px; text-align: center; }
+.app-header h1 { font-size: 24px; font-weight: 700; }
+.app-header .subtitle { font-size: 13px; color: #aab; margin-top: 6px; }
 
 .container { max-width: 1440px; margin: 0 auto; padding: 0 28px; }
 
@@ -219,13 +216,10 @@ body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC"
 </head>
 <body>
 
-<div class="header-wrap">
-    <div class="topbar">
-        <span class="brand"><span class="icon">📊</span>数据质量智能检测工具</span>
-        <span class="spacer"></span>
-        <span class="tag">数据本地处理 · 安全可靠</span>
-    </div>
-    <div class="steps-spacer"></div>
+<header class="app-header">
+    <h1>📊 数据质量智能检测工具</h1>
+    <p class="subtitle">CSV 数据导入 · 四大维度质量规则 · 智能检测引擎 · 可视化报告 · PDF 导出</p>
+</header>
     <div class="container">
         <div class="steps-bar">
             <div class="step-item" data-step="1">
@@ -250,7 +244,6 @@ body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC"
         </div>
     </div>
     <div class="steps-spacer"></div>
-</div>
 
 <div class="container">
 <div class="step-content" id="step-1">
