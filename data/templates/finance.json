@@ -1,0 +1,54 @@
+{
+    "id": "finance",
+    "name": "金融行业",
+    "description": "适用于银行、证券、保险等金融机构的客户/账户/交易数据",
+    "tables": [
+        {
+            "name": "客户表",
+            "table_key": "customer",
+            "fields": [
+                {"name": "客户编号", "key": "customer_id", "type": "text", "required": true},
+                {"name": "客户姓名", "key": "name", "type": "text", "required": true},
+                {"name": "证件类型", "key": "id_type", "type": "text", "required": false},
+                {"name": "证件号码", "key": "id_number", "type": "text", "required": true},
+                {"name": "证件有效期", "key": "id_expiry_date", "type": "date", "required": false},
+                {"name": "手机号", "key": "phone", "type": "text", "required": true},
+                {"name": "邮箱", "key": "email", "type": "text", "required": false},
+                {"name": "出生日期", "key": "birth_date", "type": "date", "required": false},
+                {"name": "职业", "key": "occupation", "type": "text", "required": false},
+                {"name": "风险等级", "key": "risk_level", "type": "text", "required": false},
+                {"name": "地址", "key": "address", "type": "text", "required": false}
+            ]
+        },
+        {
+            "name": "账户表",
+            "table_key": "account",
+            "fields": [
+                {"name": "账户编号", "key": "account_id", "type": "text", "required": true},
+                {"name": "客户编号", "key": "customer_id", "type": "text", "required": true},
+                {"name": "账户类型", "key": "account_type", "type": "text", "required": false},
+                {"name": "账户状态", "key": "status", "type": "text", "required": false},
+                {"name": "余额", "key": "balance", "type": "number", "required": false},
+                {"name": "币种", "key": "currency", "type": "text", "required": false},
+                {"name": "开户日期", "key": "open_date", "type": "date", "required": false},
+                {"name": "销户日期", "key": "close_date", "type": "date", "required": false}
+            ]
+        },
+        {
+            "name": "交易表",
+            "table_key": "trans_record",
+            "fields": [
+                {"name": "交易编号", "key": "transaction_id", "type": "text", "required": true},
+                {"name": "账户编号", "key": "account_id", "type": "text", "required": true},
+                {"name": "客户编号", "key": "customer_id", "type": "text", "required": true},
+                {"name": "交易类型", "key": "transaction_type", "type": "text", "required": false},
+                {"name": "交易金额", "key": "amount", "type": "number", "required": true},
+                {"name": "币种", "key": "currency", "type": "text", "required": false},
+                {"name": "对手方信息", "key": "counterparty_info", "type": "text", "required": false},
+                {"name": "交易日期", "key": "transaction_date", "type": "date", "required": false},
+                {"name": "交易渠道", "key": "channel", "type": "text", "required": false},
+                {"name": "交易用途", "key": "purpose", "type": "text", "required": false}
+            ]
+        }
+    ]
+}

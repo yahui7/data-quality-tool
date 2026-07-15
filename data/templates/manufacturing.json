@@ -1,0 +1,50 @@
+{
+    "id": "manufacturing",
+    "name": "制造行业",
+    "description": "适用于制造企业的供应商/物料/质检数据",
+    "tables": [
+        {
+            "name": "供应商表",
+            "table_key": "supplier",
+            "fields": [
+                {"name": "供应商编号", "key": "supplier_id", "type": "text", "required": true},
+                {"name": "供应商名称", "key": "supplier_name", "type": "text", "required": true},
+                {"name": "联系人", "key": "contact_person", "type": "text", "required": false},
+                {"name": "联系电话", "key": "contact_phone", "type": "text", "required": true},
+                {"name": "邮箱", "key": "email", "type": "text", "required": false},
+                {"name": "供应类别", "key": "category", "type": "text", "required": false},
+                {"name": "合作开始日期", "key": "start_date", "type": "date", "required": false},
+                {"name": "评级", "key": "rating", "type": "text", "required": false},
+                {"name": "地址", "key": "address", "type": "text", "required": false}
+            ]
+        },
+        {
+            "name": "物料表",
+            "table_key": "material",
+            "fields": [
+                {"name": "物料编码", "key": "material_id", "type": "text", "required": true},
+                {"name": "物料名称", "key": "material_name", "type": "text", "required": true},
+                {"name": "规格型号", "key": "specification", "type": "text", "required": false},
+                {"name": "供应商编号", "key": "supplier_id", "type": "text", "required": true},
+                {"name": "单价", "key": "unit_price", "type": "number", "required": false},
+                {"name": "库存数量", "key": "stock_qty", "type": "number", "required": false},
+                {"name": "安全库存", "key": "safety_stock", "type": "number", "required": false},
+                {"name": "入库日期", "key": "inbound_date", "type": "date", "required": false}
+            ]
+        },
+        {
+            "name": "质检表",
+            "table_key": "quality_inspection",
+            "fields": [
+                {"name": "质检编号", "key": "inspection_id", "type": "text", "required": true},
+                {"name": "物料编码", "key": "material_id", "type": "text", "required": true},
+                {"name": "批次号", "key": "batch_no", "type": "text", "required": false},
+                {"name": "检测数量", "key": "inspect_qty", "type": "number", "required": false},
+                {"name": "不合格数量", "key": "defect_qty", "type": "number", "required": false},
+                {"name": "质检结果", "key": "result", "type": "text", "required": false},
+                {"name": "质检日期", "key": "inspect_date", "type": "date", "required": false},
+                {"name": "质检员", "key": "inspector", "type": "text", "required": false}
+            ]
+        }
+    ]
+}

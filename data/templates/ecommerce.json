@@ -1,0 +1,47 @@
+{
+    "id": "ecommerce",
+    "name": "电商行业",
+    "description": "适用于电商平台、零售企业的用户/订单/商品数据",
+    "tables": [
+        {
+            "name": "用户表",
+            "table_key": "user",
+            "fields": [
+                {"name": "用户ID", "key": "user_id", "type": "text", "required": true},
+                {"name": "用户昵称", "key": "nickname", "type": "text", "required": false},
+                {"name": "手机号", "key": "phone", "type": "text", "required": true},
+                {"name": "邮箱", "key": "email", "type": "text", "required": false},
+                {"name": "注册日期", "key": "register_date", "type": "date", "required": false},
+                {"name": "会员等级", "key": "member_level", "type": "text", "required": false},
+                {"name": "地址", "key": "address", "type": "text", "required": false}
+            ]
+        },
+        {
+            "name": "订单表",
+            "table_key": "order",
+            "fields": [
+                {"name": "订单编号", "key": "order_id", "type": "text", "required": true},
+                {"name": "用户ID", "key": "user_id", "type": "text", "required": true},
+                {"name": "商品ID", "key": "product_id", "type": "text", "required": true},
+                {"name": "订单金额", "key": "amount", "type": "number", "required": true},
+                {"name": "实付金额", "key": "paid_amount", "type": "number", "required": false},
+                {"name": "订单状态", "key": "status", "type": "text", "required": false},
+                {"name": "下单时间", "key": "order_time", "type": "date", "required": false},
+                {"name": "支付方式", "key": "payment_method", "type": "text", "required": false}
+            ]
+        },
+        {
+            "name": "商品表",
+            "table_key": "product",
+            "fields": [
+                {"name": "商品ID", "key": "product_id", "type": "text", "required": true},
+                {"name": "商品名称", "key": "product_name", "type": "text", "required": true},
+                {"name": "商品分类", "key": "category", "type": "text", "required": false},
+                {"name": "单价", "key": "price", "type": "number", "required": false},
+                {"name": "库存", "key": "stock", "type": "number", "required": false},
+                {"name": "上架时间", "key": "launch_date", "type": "date", "required": false},
+                {"name": "商品状态", "key": "status", "type": "text", "required": false}
+            ]
+        }
+    ]
+}
