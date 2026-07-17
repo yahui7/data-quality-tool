@@ -12,7 +12,10 @@ body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC"
 .app-header h1 { font-size: 24px; font-weight: 700; }
 .app-header .subtitle { font-size: 13px; color: #aab; margin-top: 6px; }
 
-.container { max-width: 1440px; margin: 0 auto; padding: 24px 28px 0 28px; }
+.sticky-header { position: sticky; top: 0; z-index: 100; }
+.steps-bar-wrap { background: #f0f2f5; padding: 24px 0 0 0; }
+
+.container { max-width: 1440px; margin: 0 auto; padding: 0 28px; }
 
 .steps-bar { background: #fff; border-radius: 12px; padding: 26px 48px; display: flex; align-items: center; justify-content: center; gap: 0; box-shadow: 0 1px 6px rgba(0,0,0,0.05); }
 .steps-spacer { height: 24px; }
@@ -216,34 +219,37 @@ body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC"
 </head>
 <body>
 
-<header class="app-header">
-    <h1>📊 数据质量智能检测工具</h1>
-    <p class="subtitle">CSV 数据导入 · 四大维度质量规则 · 智能检测引擎 · 可视化报告 · PDF 导出</p>
-</header>
-    <div class="container">
-        <div class="steps-bar">
-            <div class="step-item" data-step="1">
-                <div class="step-dot active">1</div>
-                <span class="step-label">导入数据</span>
-            </div>
-            <div class="step-line"></div>
-            <div class="step-item" data-step="2">
-                <div class="step-dot">2</div>
-                <span class="step-label">配置规则</span>
-            </div>
-            <div class="step-line"></div>
-            <div class="step-item" data-step="3">
-                <div class="step-dot">3</div>
-                <span class="step-label">执行检测</span>
-            </div>
-            <div class="step-line"></div>
-            <div class="step-item" data-step="4">
-                <div class="step-dot">4</div>
-                <span class="step-label">查看报告</span>
+<div class="sticky-header">
+    <header class="app-header">
+        <h1>📊 数据质量智能检测工具</h1>
+        <p class="subtitle">CSV 数据导入 · 四大维度质量规则 · 智能检测引擎 · 可视化报告 · PDF 导出</p>
+    </header>
+    <div class="steps-bar-wrap">
+        <div class="container">
+            <div class="steps-bar">
+                <div class="step-item" data-step="1">
+                    <div class="step-dot active">1</div>
+                    <span class="step-label">导入数据</span>
+                </div>
+                <div class="step-line"></div>
+                <div class="step-item" data-step="2">
+                    <div class="step-dot">2</div>
+                    <span class="step-label">配置规则</span>
+                </div>
+                <div class="step-line"></div>
+                <div class="step-item" data-step="3">
+                    <div class="step-dot">3</div>
+                    <span class="step-label">执行检测</span>
+                </div>
+                <div class="step-line"></div>
+                <div class="step-item" data-step="4">
+                    <div class="step-dot">4</div>
+                    <span class="step-label">查看报告</span>
+                </div>
             </div>
         </div>
     </div>
-    <div class="steps-spacer"></div>
+</div>
 
 <div class="container">
 <div class="step-content" id="step-1">
